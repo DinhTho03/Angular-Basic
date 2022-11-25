@@ -9,7 +9,7 @@
           <hr>
         </mat-card-title>
       </mat-card-header>
-      <img mat-card-image src="{{dish.image}}" alt="dish.name">
+      <img mat-card-image src="{{BaseURL + dish.image}}" alt="dish.name">
       <mat-card-content>
         <p>{{dish.description}}</p>
       </mat-card-content>
@@ -56,9 +56,12 @@
     </mat-list>
     
   </div>
-  <div [hidden]="dish">
+  <div [hidden]="dish || errMess" >
         <mat-spinner></mat-spinner>
         <h4>Loading . . . Please Wait</h4>
   </div>
-
+  <div  *ngIf="errMess">
+    <h2>Error</h2>
+    <h4>{{errMess}}</h4>
+  </div>
 </div>
