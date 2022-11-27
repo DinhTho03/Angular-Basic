@@ -22,6 +22,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { AppRoutingModule } from "../app/app-routing/app-routing.module";
 import { PromotionService } from "./services/promotion.service";
+import { FeedbackService } from "./services/feedback.service";
 import { LoginComponent } from './login/login.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -79,6 +80,7 @@ import { HighlightDirective } from './directives/highlight.directive';
     DishService,
     PromotionService,
     LeaderService,
+    FeedbackService,
     ProcessHTTPMsgService,
     {provide: 'BaseURL', useValue: baseURL}
   ],
